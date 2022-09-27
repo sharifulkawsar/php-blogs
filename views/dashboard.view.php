@@ -33,8 +33,8 @@ use App\Controllers\PostController;
                         $results = $posts->allPosts();
                         // var_dump($results);
                         foreach ($results as $key => $result) { ?>
-                            <tr>
-                            <th scope="row" class="align-middle"><?= $key+1 ?></th>
+                        <tr>
+                            <th scope="row" class="align-middle"><?= $key + 1 ?></th>
                             <td class="w-25 align-middle"><img
                                     src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1474154022i/3.jpg"
                                     alt="" class="w-25">
@@ -43,16 +43,11 @@ use App\Controllers\PostController;
                             <td class="align-middle"><?= $result['title'] ?></td>
                             <td class="align-middle"><?= $result['author'] ?></td>
                             <td class="align-middle ">
-                                <a class="text-white btn btn-success" href="<?= 'edit?id='.$result['id'] ?>">Edit</a>
+                                <a class="text-white btn btn-success" href="<?= 'edit?id=' . $result['id'] ?>">Edit</a>
                             </td>
                             <td class="align-middle">
-                                <form action="functions.php" method="POST">
-                                    <button class="text-white btn btn-danger" type="submit" name="deletePost"
-                                        onclick="return confirm('Are you sure yopu want to delete this post?')"
-                                        value="14">
-                                        Delete
-                                    </button>
-                                </form>
+                                <a class="text-white btn btn-danger" href="<?= 'delete?id=' . $result['id'] ?>">
+                                    Delete </a>
                             </td>
                         </tr>
                         <?php

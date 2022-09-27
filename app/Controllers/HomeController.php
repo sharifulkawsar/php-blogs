@@ -32,4 +32,17 @@ class HomeController
         $post->updatePost($_POST);
         header('Location: /dashboard');
     }
+
+    public function delete()
+    {
+        return ResponseHelper::renderView('delete');
+    }
+
+    public function deletePost()
+    {
+
+        $post = new Post();
+        $post->deletePost($_POST);
+        header('Location: /dashboard');
+    }
 }
