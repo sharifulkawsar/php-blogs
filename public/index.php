@@ -65,7 +65,7 @@ if ($path == '/login') {
 } elseif ($path == '/delete') {
     if (strtoupper($_SERVER['REQUEST_METHOD']) == 'GET') {
         echo (new HomeController())->delete();
-        echo (new HomeController())->editPost();
+        // echo (new HomeController())->editPost();
     } else {
         echo (new HomeController())->deletePost();
     }
