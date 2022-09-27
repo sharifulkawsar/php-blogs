@@ -11,12 +11,11 @@ class HomeController
     public function index()
     {
         $database = Database::getInstance();
-        return ResponseHelper::renderView('master' );
+        return ResponseHelper::renderView('master');
     }
-
     public function edit()
     {
-        return ResponseHelper::renderView('edit' );
+        return ResponseHelper::renderView('edit');
     }
 
     public function editPost()

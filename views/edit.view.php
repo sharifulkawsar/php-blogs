@@ -19,18 +19,21 @@ include_once  __DIR__ . './partials/header.view.php';
                 <div class="col">
                     <div class="login-card">
                         <h2 class="text-center mb-4">Edit Post</h2>
-                        <form action="/update" method="post" enctype="multipart/form-data">
+                        <form action="/edit" method="post" enctype="multipart/form-data">
                             <p>
                                 <label for="title"></label>
-                                <input type="text" class="form-input" name="title" value="<?= $result_post[0]['title'] ?>" />
+                                <input type="text" class="form-input" name="title"
+                                    value="<?= $result_post[0]['title'] ?>" />
                             </p>
                             <p>
                                 <label for="author">Author</label>
-                                <input type="text" class="form-input" name="author" value="<?= $result_post[0]['author'] ?>" />
+                                <input type="text" class="form-input" name="author"
+                                    value="<?= $result_post[0]['author'] ?>" />
                             </p>
                             <p>
                                 <label for="image">Image</label>
-                                <input type="text" class="form-input" name="image" value="<?= $result_post[0]['image'] ?>" />
+                                <input type="text" class="form-input" name="image"
+                                    value="<?= $result_post[0]['image'] ?>" />
                             </p>
                             <input type="hidden" name="id" value="<?= $result_post[0]['id'] ?>" />
                             <input type="submit" class="btn btn-primary" value="update" />
