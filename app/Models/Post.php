@@ -70,7 +70,9 @@ class Post
 
     public function deletePost($id)
     {
-        $queryURI = "DELETE * FROM posts WHERE id = $id";
+        // print_r($id);
+        // die;
+        $queryURI = "DELETE FROM posts WHERE id = $id";
         $query = $this->connection->prepare($queryURI);
         return $query->execute();
     }

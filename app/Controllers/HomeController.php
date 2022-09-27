@@ -40,7 +40,7 @@ class HomeController
 
     public function deletePost()
     {
-
+        $id = $_REQUEST['id'];
         $post = new Post();
         $post->deletePost($_POST);
         header('Location: /dashboard');

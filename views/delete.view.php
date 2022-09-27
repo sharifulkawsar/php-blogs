@@ -10,7 +10,7 @@ include_once  __DIR__ . './partials/header.view.php';
     <?php include_once  __DIR__ . './partials/nav.view.php'; ?>
     <?php
     $posts = new HomeController();
-    $result_post = $posts->deletePost();
+    $result_post = $posts->delete();
     ?>
 
     <div class="main">

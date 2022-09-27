@@ -46,8 +46,11 @@ use App\Controllers\PostController;
                                 <a class="text-white btn btn-success" href="<?= 'edit?id=' . $result['id'] ?>">Edit</a>
                             </td>
                             <td class="align-middle">
-                                <a class="text-white btn btn-danger" href="<?= 'delete?id=' . $result['id'] ?>">
-                                    Delete </a>
+                                <form action="/dashboard" method="post">
+                                    <a class="text-white btn btn-danger" type="submit"
+                                        href="<?= 'dashboard?id=' . $result['id'] ?>">
+                                        Delete </a>
+                                </form>
                             </td>
                         </tr>
                         <?php
